@@ -84,7 +84,7 @@ else
 5 -> 2, 4
 8 -> 2, 4, 6, 8*/
 
-Console.WriteLine("введите число");
+/* Console.WriteLine("введите число");
 int a = int.Parse(Console.ReadLine());
 int b = 1;
 while (b <= a)
@@ -94,4 +94,73 @@ if (b % 2==0)
     Console.Write(b + " ");
 }
     b++;
+} */
+
+/* Напишите программу, которая принимает на
+вход пятизначное число и проверяет, является ли оно
+палиндромом.
+14212 -> нет
+23432 -> да
+12821 -> да */
+
+/* Console.WriteLine("введите пятизначное число");
+int n = int.Parse(Console.ReadLine());
+
+int a = n / 10000;
+int b = n % 10;
+int c = n % 100; c = c / 10;
+int d = n /1000; d = d % 10;
+
+if (n < 10000 | n > 99999)
+{
+    Console.WriteLine(n + " не пятизначное");
+    return;
+}
+
+if (a == b && d == c)
+{
+    Console.WriteLine(n + " полиндром");
+}
+else
+{
+    Console.WriteLine(n + " не полиндром");
+}
+ */
+
+/* Напишите программу, которая принимает на
+вход координаты двух точек и находит расстояние между
+ними в 3D пространстве. */
+
+/* Console.WriteLine("введите х1");
+int x1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("введите х2");
+int x2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("введите y1");
+int y1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("введите y2");
+int y2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("введите z1");
+int z1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("введите z2");
+int z2 = int.Parse(Console.ReadLine());
+
+double result = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2));
+Console.WriteLine("расстояние между заданными точками  " + Math.Round(result, 3)); */
+
+/* Напишите программу, которая принимает на
+вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+3 -> 1, 4, 9.
+5 -> 1, 8, 27, 64, 125 */
+
+Console.WriteLine("введите число");
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 1; i <= n; i++)
+{
+    Console.Write(Math.Pow(i, 3) + " ");
 }
