@@ -247,3 +247,114 @@ for (int i = 0; i < massiv.Length; i++)
 {
     Console.Write($"{massiv[i]} ");
 } */
+
+//----------ДОМАШНЕЕ ЗАДАНИЕ 5-----------------
+
+/* Задайте массив заполненный случайными
+положительными трёхзначными числами. Напишите
+программу, которая покажет количество чётных чисел в
+массиве. */
+
+/* void PrintArray (int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+void FillArray (int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = new Random().Next(0, 10);
+}
+}
+
+/*int [] mass = new int [10];
+
+FillArray(mass);
+PrintArray(mass);
+
+int count = 0;
+for (int i = 0; i < mass.Length; i++)
+{
+    if (mass[i]%2 == 0)
+    {
+        count++;
+    }
+}
+
+Console.Write(count); */
+
+/* Задайте одномерный массив, заполненный
+случайными числами. Найдите сумму элементов, стоящих
+на нечётных позициях.
+[3, 7, 23, 12] -> 19
+[-4, -6, 89, 6] -> 0 */
+
+/* int [] mass = new int [7];
+
+FillArray(mass);
+PrintArray(mass);
+
+int count = 0;
+
+for (int i = 0; i < mass.Length; i++)
+    {
+        if (i%2 != 0)
+        {
+            count = count + mass[i];
+        }
+    }
+Console.Write(count); */
+
+/* Задайте массив вещественных чисел. Найдите
+разницу между максимальным и минимальным
+элементов массива. */
+
+
+void PrintArray (double[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+void FillArray (double[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+{
+    arr[i] = new Random().Next(0, 50) + new Random().NextDouble();
+}
+}
+
+double [] mass = new double [7];
+
+FillArray(mass);
+PrintArray(mass);
+
+int max = 0;
+int min = 0;
+
+for (int i = 0; i < mass.Length; i++)
+{
+    if (mass[i] > mass[max])
+    {
+        max = i;
+    }
+}
+for (int i = 0; i < mass.Length; i++)
+{
+    if (mass[i] < mass[min])
+    {
+        min = i;
+    }
+}
+Console.WriteLine();
+Console.WriteLine(mass[max]);
+Console.WriteLine(mass[min]);
+Console.WriteLine(mass[max] - mass[min]);
